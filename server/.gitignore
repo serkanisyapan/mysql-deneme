@@ -1,0 +1,3 @@
+# ignores .env file pushing to git
+.env
+node_modules
