@@ -28,12 +28,12 @@ app.get("/malzeme-kartlari", (req, res) => {
 
 // yeni bir malzeme karti yaratir
 app.post("/malzeme-kartlari", (req, res) => {
-   const { MalzemeAdi, KAFKodu, ArtikelKodu, YabanciAdi, Birim } = req.body;
+   const { MalzemeAdi, KAFKodu, ArtikelKodu, YabanciAdi, Birim, MalzemeKodu, GrupAdi } = req.body;
 
    // yeni bir malzeme karti eklemek icin sql query
-   const yeniMalzemeKartiEkle = "INSERT INTO malzemekartlari (`MalzemeAdi`, `KAFKodu`, `ArtikelKodu`, `YabanciAdi`, `Birim`) VALUES (?)"; 
+   const yeniMalzemeKartiEkle = "INSERT INTO malzemekartlari (`MalzemeAdi`, `KAFKodu`, `ArtikelKodu`, `YabanciAdi`, `Birim`, `MalzemeKodu`, `GrupAdi`) VALUES (?)"; 
 
-   const malzemeKartiDegerleri = [MalzemeAdi, KAFKodu, ArtikelKodu, YabanciAdi, Birim];
+   const malzemeKartiDegerleri = [MalzemeAdi, KAFKodu, ArtikelKodu, YabanciAdi, Birim, MalzemeKodu, GrupAdi];
 
    db.query(yeniMalzemeKartiEkle, [malzemeKartiDegerleri], (err, data) => {
     if (err) return res.json(err);

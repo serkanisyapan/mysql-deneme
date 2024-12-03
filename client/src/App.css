@@ -21,14 +21,14 @@
 .styled-table {
   margin: 0 auto;
   border-collapse: collapse;
-  width: 70%;
+  width: 80%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .styled-table th,
 .styled-table td {
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 10px;
   text-align: left;
 }
 

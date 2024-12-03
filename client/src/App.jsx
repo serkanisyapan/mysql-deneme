@@ -29,7 +29,9 @@ function App() {
       <table className='styled-table'>
         <thead>
           <tr>
+            <th>Malzeme Kodu</th>
             <th>Malzeme Adı</th>
+            <th>Grup Adı</th>
             <th>KAF Kodu</th>
             <th>Artikel Kodu</th>
             <th>Malzeme Yabancı Adı</th>
@@ -39,7 +41,9 @@ function App() {
         <tbody>
           {malzemeKartlari.map(malzemeKarti => (
             <tr key={malzemeKarti.KAFKodu}>
+              <td>{malzemeKarti.MalzemeKodu}</td>
               <td>{malzemeKarti.MalzemeAdi}</td>
+              <td>{malzemeKarti.GrupAdi}</td>
               <td>{malzemeKarti.KAFKodu}</td>
               <td>{malzemeKarti.ArtikelKodu}</td>
               <td>{malzemeKarti.YabanciAdi}</td>
